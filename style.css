@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+
+:root{
+  --font-tittle: font-family 'Honk', system-ui;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-shadow: 0;
+
+  font-family: sans-serif;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #18181B;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#tittle h1{
+  font-family: Honk;
+  font-size: 80px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#form {
+  max-width: 600px;
+  color: white;
+}
+
+#conteiner-pass {
+  margin: 25px 0;
+  text-align: center;
+  color: white;
+}
+
+#slider {
+  -webkit-appearance: none;
+  border-radius: 10px;
+  margin: 8px 0 0 0;
+  width: 100%;
+  height: 17px;
+  outline: none;
+}
+
+#btn {
+  height: 40px;
+  background-color: #3EB72B; 
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 40px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.conteiner-pass {
+  max-width: 480px;
+  margin: 14px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.titulo {
+  text-align: center;
+  color: #fff;
+  font-size: 28px;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.password {
+  height: 60px;
+  background-color: rgba(0, 0,0,0.4);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #313131;
+  
+  transition: transform 0.5s;
+}
+
+
+.password:hover {
+ transform: scale(1.05);
+}
+
+.tooltip {
+  position: relative;
+  top: 20px;
+  padding: 6px 8px;
+  background-color: rgb(0,0,0);
+  text-align: center;
+  font-size: 16px;
+  border-radius: 4px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.hide {
+  display: none;
+}
+
+.conteiner-pass:hover .tooltip{
+  visibility: visible;
+  bottom: 50px;
+  opacity: 1;
+}
